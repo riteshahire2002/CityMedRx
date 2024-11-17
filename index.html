@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Bootstrap Link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FavIcon -->
+    <link rel="icon" href="./src/fav2.png" ; />
+
+    <!--Icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>CityMedRX</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="./src/logo3.png"
+            alt="Logo"
+            width="110"
+            height="30"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active me-2"
+                aria-current="page"
+                href="medicine.html"
+                >Medicine</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-2" href="healthcare.html">Healthcare</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link me-2" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+
+          <div class="input-group rounded w-25">
+            <input
+              type="search"
+              class="form-control rounded"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="search-addon"
+            />
+            <span class="input-group-text" id="search-addon">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="btn btn-light me-3"
+        style="width: 100px"
+        data-mdb-ripple-init
+      >
+        <a href="login.html" class="text-decoration-none text-dark">Log In</a>
+      </button>
+    </nav>
+    <!-- navbar -->
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="display-4">Your Health, Our Priority</h1>
+        <p>Get medicines delivered at your doorstep with just a click.</p>
+      </div>
+    </section>
+
+    <!-- Prescription Upload Section -->
+    <section id="upload" class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Upload Content -->
+          <div class="col-lg-6">
+            <h3 class="mb-4">Upload Your Prescription</h3>
+            <p class="text-muted">
+              Easily upload your prescription and let us take care of the rest.
+              We’ll ensure that your medicines reach you on time, hassle-free.
+            </p>
+            <ul>
+              <li>Fast processing of prescriptions.</li>
+              <li>Doorstep delivery within 24 hours.</li>
+              <li>100% secure and private.</li>
+            </ul>
+          </div>
+          <!-- Upload Form -->
+          <div class="col-lg-6">
+            <div class="upload-section">
+              <div class="upload-btn">
+                <i class="bi bi-cloud-upload"></i>
+                <span
+                  ><div class="mb-3">
+                    <label for="formFile" class="form-label">
+                      Click here to upload your prescription</label
+                    >
+                    <input
+                      class="form-control"
+                      type="file"
+                      id="formFile"
+                    /></div
+                ></span>
+                <input
+                  type="file"
+                  class="form-control d-none"
+                  accept="image/*,application/pdf"
+                />
+                <button
+                  type="button"
+                  class="btn btn-dark btn-rounded me-5"
+                  data-mdb-ripple-init
+                >
+                  Upload
+                </button>
+              </div>
+
+              <p class="text-muted mt-3 text-center">
+                Accepted formats: JPG, PNG, PDF
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="hr hr-blurry" />
+
+    <!-- Medicine -->
+    <div class="container mb-5" id="product-cards">
+      <h1 class="text-start mb-2">Best Sellers</h1>
+      <div class="row" style="margin-top: 35px">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img
+              src="https://images.apollo247.in/pub/media/catalog/product/c/a/cal2958_2-min.jpg"
+              alt=""
+            />
+            <div class="card-body">
+              <h3 class="text-center">Calpol 650</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>
+                MRP ₹35.75 <sup>(15% off)</sup>
+                <span><li class="fa-solid fa-cart-shopping"></li></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img
+              src="https://images.apollo247.in/pub/media/catalog/product/L/I/LIM0003_3_1.jpg?tr=q-80,f-webp,w-400,dpr-6,c-at_max"
+              alt=""
+            />
+            <div class="card-body">
+              <h3 class="text-center">Limcee</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>
+                MRP ₹25.12 <sup>(15% off)</sup>
+                <span><li class="fa-solid fa-cart-shopping"></li></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img
+              src="https://res.fkhealthplus.com/incom/images/product/Evion-400-mg-1666416049-10001930-1.jpg"
+              alt=""
+            />
+            <div class="card-body">
+              <h3 class="text-center">Evion 400</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>
+                MRP ₹55.12 <sup>(10% off)</sup>
+                <span><li class="fa-solid fa-cart-shopping"></li></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img
+              src="https://www.practostatic.com/practopedia-images/v3/res-750/vicks-action-advanced-500mg-tablet-10-s_4a35fb96-d865-4879-8dc0-f224443da200.JPG"
+              alt=""
+            />
+            <div class="card-body">
+              <h3 class="text-center">Vicks Action 500</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>
+                MRP ₹61.52 <sup>(5% off)</sup>
+                <span><li class="fa-solid fa-cart-shopping"></li></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 30px">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img
+              src="https://singhlamedicos.co.in/wp-content/uploads/2024/07/Untitled-design-2024-07-17T175025.464.jpg"
+              alt=""
+            />
+            <div class="card-body">
+              <h3 class="text-center">Neurobion Forte</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>
+                MRP ₹41.92 <sup>(18% off)</sup>
+                <span><li class="fa-solid fa-cart-shopping"></li></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img
+              src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/fa40f105e9834b62b15245b734108a80.jpg"
+              alt=""
+            />
+            <div class="card-body">
+              <h3 class="text-center">Sinarest LP</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>
+                MRP ₹121.05 <sup>(15% off)</sup>
+                <span><li class="fa-solid fa-cart-shopping"></li></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img
+              src="https://images.apollo247.in/pub/media/catalog/product/f/e/feb0007.jpg"
+              alt=""
+            />
+            <div class="card-body">
+              <h3 class="text-center">Frebrex Plus</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>
+                MRP ₹75.47 <sup>(12% off)</sup>
+                <span><li class="fa-solid fa-cart-shopping"></li></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img
+              src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/b41209ab34a642f2b601632bc9f4f868.jpg"
+              alt=""
+            />
+            <div class="card-body">
+              <h3 class="text-center">ATM 250</h3>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>
+                MRP ₹135.01 <sup>(18% off)</sup>
+                <span><li class="fa-solid fa-cart-shopping"></li></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- Medicine cards -->
+
+    <!-- Categories -->
+    <div class="container mb-5" id="product-cards">
+      <h1 class="text-start mb-2">Product Categories</h1>
+      <div class="row" style="margin-top: 35px">
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img
+              src="https://img.freepik.com/free-photo/group-bowls-full-spices-wooden-background_23-2148211177.jpg?t=st=1731754503~exp=1731758103~hmac=1f401525e897ca0acb20a0e219a18414653948cb7f04c9f6ad0bba3eccec2dd3&w=900"
+              alt=""
+              style="height: 400px"
+            />
+            <h4 class="text-center">Ayurvedic</h4>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img
+              src="https://img.freepik.com/free-vector/female-doctor-give-little-boy-treatment_1308-33162.jpg?t=st=1731754563~exp=1731758163~hmac=7460fa04abd19a90a0e420dc1f93e486781be760b21cf6cb615f963f59847a9c&w=740"
+              alt=""
+              style="height: 400px"
+            />
+            <h4 class="text-center">Baby Care</h4>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img
+              src="https://img.freepik.com/free-vector/dentistry-concept-illustration_1284-4609.jpg?t=st=1731754677~exp=1731758277~hmac=1a67de35aa27fa55623ab2a0d1a351be37f9872e62f26ec59d5e7f9ddb4389b0&w=740"
+              alt=""
+              style="height: 400px"
+            />
+            <h4 class="text-center">Dental Care</h4>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card mt-4">
+            <img
+              src="https://img.freepik.com/free-photo/smiley-elder-covid-recovery-center-female-doctor-using-oximeter_23-2148847819.jpg?t=st=1731754785~exp=1731758385~hmac=a558efb29c0b831a705b38e6f0cbe43892f1504e3ed5b14275624904e4bfad9e&w=996"
+              alt=""
+              style="height: 400px"
+            />
+            <h4 class="text-center">Diagnostic Devices</h4>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card mt-4">
+            <img
+              src="https://img.freepik.com/free-photo/beautiful-girl-with-towel-showing-beauty-products_1157-31082.jpg?t=st=1731754931~exp=1731758531~hmac=48b9b1fe067b49f06561de02ff1e187da00b8ae3c9b43471ea6a97e20716c044&w=996"
+              alt=""
+              style="height: 400px"
+            />
+            <h4 class="text-center">Beauty Care</h4>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card mt-4">
+            <img
+              src="https://img.freepik.com/free-vector/realistic-vitamin-complex-package_23-2148484944.jpg?t=st=1731755050~exp=1731758650~hmac=4172bd6d903745ae85e559a449fc37fce1e4a485e40489f80dafbce571855860&w=740"
+              alt=""
+              style="height: 400px"
+            />
+            <h4 class="text-center">Multivitamins</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Medicine cards -->
+
+    <!-- offer -->
+    <div class="container" id="offer">
+      <div class="row">
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h3>Free Shipping</h3>
+          <p>On order over ₹2000</p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-rotate-left"></i>
+          <h3>Free Returns</h3>
+          <p>If the Medicine Change by Doctor</p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-truck"></i>
+          <h3>Fast Delivery</h3>
+          <p>World Wide</p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <h3>Big choice</h3>
+          <p>Of products</p>
+        </div>
+      </div>
+    </div>
+    <!-- offer -->
+
+    <!-- newslater -->
+    <div class="container" id="newslater">
+      <h3 class="text-center">Subscribe To CityMedRX For Latest upload.</h3>
+      <div class="input text-center">
+        <input type="text" placeholder="Enter Your Email.." />
+        <button id="subscribe">SUBSCRIBE</button>
+      </div>
+    </div>
+    <!-- newslater -->
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>CityMedRX</h3>
+              <p class="h4">
+                Pune <br />
+                Jalgaon <br />
+                Nashik <br />
+              </p>
+              <strong>Phone:</strong> +91 7350195480 <br />
+              <strong>Email:</strong> citymedrx29@gmail.com <br />
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Usefull Links</h4>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Privacy policey</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Categories</h4>
+
+              <ul>
+                <li><a href="#">Ayurvedic</a></li>
+                <li><a href="#">Baby Care</a></li>
+                <li><a href="#">Dental Care</a></li>
+                <li><a href="#">Diagnostic Devices</a></li>
+                <li><a href="#">Beauty Care</a></li>
+                <li><a href="#">Multivitamins</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Social Networks</h4>
+              <div class="socail-links mt-3">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="container py-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>CityMedRX</span></strong
+          >. All Rights Reserved
+        </div>
+        <div class="credits">Designed by <a href="#">Ritesh Ahire</a></div>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
