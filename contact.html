@@ -76,55 +76,52 @@
 
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index.html"
+          ><img
             src="./src/logo3.png"
-            alt="Logo"
-            width="110"
+            alt="Company Logo"
+            width="100"
             height="30"
             class="d-inline-block align-text-top"
-          />
-        </a>
+        /></a>
+        <!-- Toggler Button for Mobile -->
         <button
-          class="navbar-toggler btn-light"
+          class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a
-                class="nav-link active me-2"
-                aria-current="page"
-                href="medicine.html"
-                >Medicine</a
+              <a class="nav-link text-light" href="medicine.html">Medicine</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="healthcare.html"
+                >HealthCare</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link me-2" href="healthcare.html">Healthcare</a>
-            </li>
-            <li class="nav-item me-2">
-              <a class="nav-link me-2" href="contact.html">Contact Us</a>
+              <a class="nav-link text-light" href="contact.html">Contact Us</a>
             </li>
           </ul>
+          <!-- Login Button -->
+          <button class="btn btn-light" data-mdb-ripple-init type="button">
+            <a href="login.html" class="text-decoration-none text-dark"
+              >Log In</a
+            >
+          </button>
         </div>
       </div>
-      <button
-        type="button"
-        class="btn btn-light me-3"
-        style="width: 100px"
-        data-mdb-ripple-init
-      >
-        <a href="login.html" class="text-decoration-none text-dark">Log In</a>
-      </button>
     </nav>
     <!-- navbar -->
 
